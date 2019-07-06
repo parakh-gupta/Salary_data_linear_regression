@@ -23,19 +23,21 @@ reg.fit(X_train, y_train)
 y_pred = reg.predict(X_test)
 
 # Visualising the Training set results
+fig = plt.figure()
 plt.scatter(X_train, y_train, color='green')
 plt.plot(X_train, reg.predict(X_train), color='blue')
 plt.title('Salary vs Experience (Training set)')
 plt.xlabel('Years of Experience')
 plt.ylabel('Salary')
 plt.show()
-plt.savefig('train.jpg')
+fig.savefig('train.jpg')
 
 # Visualising the Test set results
+fig1 = plt.figure()
 plt.scatter(X_test, y_test, color='red')
 plt.plot(X_train, reg.predict(X_train), color='blue')
 plt.title('Salary vs Experience (Test set)')
 plt.xlabel('Years of Experience')
 plt.ylabel('Salary')
 plt.show()
-plt.savefig('test.jpg')
+fig1.savefig('test.jpg')
